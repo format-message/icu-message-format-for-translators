@@ -4,6 +4,9 @@
 
 The [ICU Message Format][icu-message] is a great format for user-visible strings, and includes simple placeholders, number and date placeholders, and selecting among submessages for gender and plural arguments. The format is used in apis in [C++][icu-cpp], [PHP][icu-php], [Java][icu-java], and [JavaScript][format-message] [2][messageformat] [3][intl-messageformat].
 
+This repository is for a github page explaning the format for translators so that they can understand what parts get translated in a complex message.
+
+Any feedback or contributions are welcome.
 
 [icu-message]: http://userguide.icu-project.org/formatparse/messages
 [icu-cpp]: http://icu-project.org/apiref/icu4c/classicu_1_1MessageFormat.html
