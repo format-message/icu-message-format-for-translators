@@ -595,6 +595,7 @@ var MessagePlural = React.createClass({
       React.createElement('span', { className: 'icu-m-argname' }, this.props.id),
       ', ',
       React.createElement('span', { className: 'icu-m-argtype' }, this.props.type),
+      ', ',
       this.props.offset ? ' ' : null,
       this.props.offset ? React.createElement('span', { className: 'icu-m-argstyle' },
         'offset:' + this.props.offset
@@ -613,6 +614,7 @@ var MessageSelect = React.createClass({
       React.createElement('span', { className: 'icu-m-argname' }, this.props.id),
       ', ',
       React.createElement('span', { className: 'icu-m-argtype' }, 'select'),
+      ', ',
       React.createElement(MessageOptions, { type: 'select', options: this.props.options }),
       React.createElement('br'),
       '}'
