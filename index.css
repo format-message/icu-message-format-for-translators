@@ -1,0 +1,127 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #111;
+}
+.icu-m {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.8em;
+  margin: 0.3em;
+  color: #567482;
+  font-size: 0.9em;
+  line-height: 1.45;
+  border: 1px solid #dce6f0;
+  border-radius: 0.3em;
+  background: #f3f6fa;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: bold;
+  font-style: normal;
+}
+.icu-m--bad {
+  background: #f3dddd;
+}
+.icu-m--bad::before {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 -0.1em;
+  content: "⚠";
+  color: #AE5300;
+  font-size: 3em;
+  line-height: 0.3;
+}
+.icu-m-arg {
+  color: #183691;
+  font-weight: normal;
+}
+.icu-m-argname,
+.icu-m-argtype,
+.icu-m-argstyle,
+.icu-m-argkey {
+  color: #0086b3;
+  font-style: italic;
+}
+.icu-m-sub {
+  color: #567482;
+  font-weight: bold;
+  font-style: normal;
+}
+.ext::after {
+  margin: 0 0 0 4px;
+  content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221%22%20width%3D%2212%22%20height%3D%2212%22%3E%3Cpath%20fill%3D%22%23fff%22%20stroke%3D%22%2306c%22%20d%3D%22M1.5%204.5h6v6h-6z%22%2F%3E%3Cpath%20d%3D%22M4%202.5l1%201%20.25.75-2.5%202.25L5.5%209.25l2.25-2.5.75.25%201%201L11%206.5V1H5.5L4%202.5z%22%20fill%3D%22%2306f%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M6%202h4v4l-.5.75-1.25-2-3%203.25L4%206.75l3.25-3-2-1.25L6%202z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E")
+}
+
+.main {
+  margin: 10px 490px 10px 10px;
+}
+.aside {
+  position: fixed;
+  right: -1px;
+  top: -1px;
+  width: 480px;
+  padding: 10px;
+  border: 1px solid #dce6f0;
+  max-height: 100%;
+  overflow-y: auto;
+  border-radius: 0 0 0 0.3em;
+  background: #fafafa;
+}
+
+.TryIt-text {
+  margin: 0;
+  width: 100%;
+  background: white;
+  font-weight: normal;
+}
+.TryIt-message {
+  display: block;
+  margin: 10px 0 0 0;
+}
+.TryIt-error {
+  display: block;
+  font-weight: normal;
+}
+.TryIt-params {
+  margin: 20px 0 0 0;
+  padding: 0;
+  border: none;
+}
+.TryIt-params-legend {
+  padding: 0;
+}
+.TryIt-final {
+  display: block;
+  margin: 10px 0 0 0;
+  color: #0086b3;
+}
+
+.p-table {
+  display: table;
+}
+.p-row {
+  display: table-row;
+}
+.p-cell {
+  display: table-cell;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 10px;
+  }
+  .aside {
+    position: static;
+    margin: 10px;
+    width: auto;
+    border-radius: 0.3em;
+  }
+}
