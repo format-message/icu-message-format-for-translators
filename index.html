@@ -288,13 +288,13 @@
   </div>
   <p>
     <strong>plural</strong> placeholders pick a message part to show based on number pluralization rules.
-    In English everything is plural <code>other</code> except when there is only <code>one</code>. 
-    For example: 0 messages, 1 message, 20 messages. 
-    Each language has <a class="ext" href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">its own rules for pluralization</a>, 
-    and in ICU the possible keys are <code>zero</code>, <code>one</code>, <code>two</code>, 
-    <code>few</code>, <code>many</code>, and <code>other</code>. If you want a message for a specific 
-    number that does not correspond to a key, or for which the key doesn't have a rule in you language you 
-    can use <code>=n</code>. 
+    In English everything is plural <code>other</code> except when there is only <code>one</code>.
+    For example: 0 messages, 1 message, 20 messages.
+    Each language has <a class="ext" href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">its own rules for pluralization</a>,
+    and in ICU the possible keys are <code>zero</code>, <code>one</code>, <code>two</code>,
+    <code>few</code>, <code>many</code>, and <code>other</code>. If you want a message for a specific
+    number that does not correspond to a key, or for which the key doesn't have a rule in you language you
+    can use <code>=n</code>.
   </p>
   <div class="icu-m" lang="en-US">
     <span class="icu-m-arg">{
@@ -312,11 +312,11 @@
     As the example showed, message parts for specific numbers can use a special <code>#</code> placeholder that will be replaced with the actual number, formatted as a <code>number</code> placeholder.
   </p>
   <p>
-  	When the language code is provided, the plural rules for that language are loaded and used to resolve 
-  	the plural class based on the number entered. For example for Arabic if the remainder of number of bananas 
-  	divided by 100 is between 3 to 10, the plural case defined under <code>few</code> is used and that remainder 
+  	When the language code is provided, the plural rules for that language are loaded and used to resolve
+  	the plural class based on the number entered. For example for Arabic if the remainder of number of bananas
+  	divided by 100 is between 3 to 10, the plural case defined under <code>few</code> is used and that remainder
   	is between 11 to 99, the plural case defined under <code>many</code> is used.
-  	
+
   <p>
     <strong>selectordinal</strong> placeholders are much like plural, only they are used for ordering instead of counting.
     The keys are the same as for plural, but the rules for each language may be different.
@@ -349,6 +349,7 @@
 </aside>
 
 
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
 <script src="index.js"></script>
 </body>
 </html>

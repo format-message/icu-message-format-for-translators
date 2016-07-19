@@ -4,7 +4,7 @@
 
 The [ICU Message Format][icu-message] is a great format for user-visible strings, and includes simple placeholders, number and date placeholders, and selecting among submessages for gender and plural arguments. The format is used in apis in [C++][icu-cpp], [PHP][icu-php], [Java][icu-java], and [JavaScript][format-message] [2][messageformat] [3][intl-messageformat].
 
-This repository is for a github page explaning the format for translators so that they can understand what parts get translated in a complex message.
+This repository is for a github page explaining the format for translators so that they can understand what parts get translated in a complex message.
 
 Any feedback or contributions are welcome.
 
@@ -15,4 +15,4 @@ Any feedback or contributions are welcome.
 [format-message]: https://www.npmjs.com/package/format-message
 [messageformat]: https://www.npmjs.com/package/messageformat
 [intl-messageformat]: https://www.npmjs.com/package/intl-messageformat
-[logo]: https://cdn.rawgit.com/format-message/format-message/446d303/src/logo/format-message.svg
+[logo]: https://cdn.rawgit.com/format-message/format-message/2febdd8/logo.svg

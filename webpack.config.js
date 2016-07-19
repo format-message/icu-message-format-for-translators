@@ -1,22 +1,15 @@
-const webpack = require('webpack')
+var webpack = require('webpack')
 
 module.exports = {
   cache: true,
   context: __dirname,
   entry: {
     index: [
-      'babel-core/polyfill',
       './lib/main.js'
     ]
   },
   module: {
-    loaders: [
-      {
-        test: /\.jsx?$/i,
-        exclude: /node_modules/,
-        loader: 'babel'
-      }
-    ],
+    loaders: [],
   },
   output: {
     filename: '[name].js',
@@ -24,6 +17,7 @@ module.exports = {
     path: __dirname,
     publicPath: ''
   },
+  devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -42,9 +36,5 @@ module.exports = {
         screw_ie8: true
       }
     })
-  ],
-  babel: {
-    stage: 0,
-    loose: 'all'
-  }
+  ]
 }
