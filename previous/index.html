@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ICU Message Format for Translators</title>
+<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<main class="main">
+<h1>ICU Message Format for Translators</h2>
+
+<section>
+  <h2>TL;DR</h2>
+  <p>
+    Everything that is bold needs to be translated. Everything italic must not be translated.
+    The curly blocks can be moved around as needed. Pink warning blocks are counterexamples.
+    Message parts in nested curly blocks may need to be added or removed.
+  </p>
+  <div class="icu-m" lang="en-US">
+    Hello, <span class="icu-m-arg">{<span class="icu-m-argname">place</span>}</span>!
+  </div>
+  <div class="icu-m" lang="es">
+    Hola, <span class="icu-m-arg">{<span class="icu-m-argname">place</span>}</span>!
+  </div>
+  <div class="icu-m icu-m--bad" lang="pt-BR">
+    Oi, <span class="icu-m-arg">{<span class="icu-m-argname">lugar</span>}</span>!
+  </div>
+  <br/>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">gender</span>,
+      <span class="icu-m-argtype">select</span>,<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">male</span>
+      {<span class="icu-m-sub">He won</span>}<br/>
+      <span class="icu-m-argkey">female</span>
+      {<span class="icu-m-sub">She won</span>}<br/>
+      &nbsp;<span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub">They won</span>}
+    }</span>
+    the game.
+  </div>
+  <div class="icu-m" lang="pt-BR">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">gender</span>,
+      <span class="icu-m-argtype">select</span>,<br/>
+      <span class="icu-m-argkey">female</span>
+      {<span class="icu-m-sub">Ela ganhou</span>}<br/>
+      &nbsp;<span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub">Ele ganhou</span>}
+    }</span>
+    o jogo.
+  </div>
+  <div class="icu-m icu-m--bad" lang="pt-BR">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">gender</span>,
+      <span class="icu-m-argtype">select</span>,<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">male</span>
+      {<span class="icu-m-sub">He won</span>}<br/>
+      <span class="icu-m-argkey">female</span>
+      {<span class="icu-m-sub">She won</span>}<br/>
+      &nbsp;<span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub">They won</span>}
+    }</span>
+    o jogo.
+  </div>
+  <p>
+    Hopefully you don't have to translate messages this complex, but the following is valid too.
+  </p>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">gender</span>,
+      <span class="icu-m-argtype">select</span>,<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">male</span>
+      {<span class="icu-m-sub">On
+        <span class="icu-m-arg">{
+          <span class="icu-m-argname">date</span>,
+          <span class="icu-m-argtype">date</span>,
+          <span class="icu-m-argstyle">short</span>
+        }</span>,
+        <span class="icu-m-arg">{<span class="icu-m-argname">name</span>}</span>
+        ate <span class="icu-m-arg">{<br/>&nbsp;&nbsp;&nbsp;
+          <span class="icu-m-argname">numBananas</span>,
+          <span class="icu-m-argtype">plural</span>,<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">=0</span>
+          {<span class="icu-m-sub">no bananas</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">one</span>
+          {<span class="icu-m-sub">a banana</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">=2</span>
+          {<span class="icu-m-sub">a pair of bananas</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">other</span>
+          {<span class="icu-m-sub"># bananas</span>}<br/>
+        &nbsp;&nbsp;}</span>
+        at his house.</span>}<br/>
+      <span class="icu-m-argkey">female</span>
+      {<span class="icu-m-sub">On
+        <span class="icu-m-arg">{
+          <span class="icu-m-argname">date</span>,
+          <span class="icu-m-argtype">date</span>,
+          <span class="icu-m-argstyle">short</span>
+        }</span>,
+        <span class="icu-m-arg">{<span class="icu-m-argname">name</span>}</span>
+        ate <span class="icu-m-arg">{<br/>&nbsp;&nbsp;&nbsp;
+          <span class="icu-m-argname">numBananas</span>,
+          <span class="icu-m-argtype">plural</span>,<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">=0</span>
+          {<span class="icu-m-sub">no bananas</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">one</span>
+          {<span class="icu-m-sub">a banana</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">=2</span>
+          {<span class="icu-m-sub">a pair of bananas</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">other</span>
+          {<span class="icu-m-sub"># bananas</span>}<br/>
+        &nbsp;&nbsp;}</span>
+        at her house.</span>}<br/>
+      &nbsp;<span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub">On
+        <span class="icu-m-arg">{
+          <span class="icu-m-argname">date</span>,
+          <span class="icu-m-argtype">date</span>,
+          <span class="icu-m-argstyle">short</span>
+        }</span>,
+        <span class="icu-m-arg">{<span class="icu-m-argname">name</span>}</span>
+        ate <span class="icu-m-arg">{<br/>&nbsp;&nbsp;&nbsp;
+          <span class="icu-m-argname">numBananas</span>,
+          <span class="icu-m-argtype">plural</span>,<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">=0</span>
+          {<span class="icu-m-sub">no bananas</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">one</span>
+          {<span class="icu-m-sub">a banana</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">=2</span>
+          {<span class="icu-m-sub">a pair of bananas</span>}<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">other</span>
+          {<span class="icu-m-sub"># bananas</span>}<br/>
+        &nbsp;&nbsp;}</span>
+        at their house.</span>}
+    }</span>
+  </div>
+</section>
+
+<section>
+  <h2>Overview</h2>
+  <p>
+    <a class="ext" href="http://site.icu-project.org/">International Components for Unicode or ICU</a>
+    is a globalization library providing string comparison, text formatting and more.
+    This document focuses on the message formatting patterns created by ICU that can be used in
+    <a class="ext" href="http://icu-project.org/apiref/icu4c/">C/C++</a>,
+    <a class="ext" href="http://icu-project.org/apiref/icu4j/">Java</a>,
+    <a class="ext" href="http://php.net/manual/en/class.messageformatter.php">PHP</a>,
+    <a class="ext" href="https://rubygems.org/gems/message_format">Ruby</a>, and
+    <a class="ext" href="https://www.npmjs.com/package/format-message">JavaScript</a
+    ><a class="ext" href="https://www.npmjs.com/package/messageformat"></a
+    ><a class="ext" href="https://www.npmjs.com/package/intl-messageformat"></a>
+  </p>
+</section>
+
+<section>
+  <h2>Basic placeholders</h2>
+  <p>
+    Messages written in the ICU format can contain placeholders that are replaced before the final message is shown.
+    These placeholders are surrounded by curly braces {}. For example:
+  </p>
+  <div class="icu-m" lang="en-US">
+    Hello,
+    <span class="icu-m-arg">{<span class="icu-m-argname">firstName</span>}</span>
+    <span class="icu-m-arg">{<span class="icu-m-argname">lastName</span>}</span>!
+  </div>
+  <p>
+    It is important when translating these strings to not translate the placeholders.
+    They can, however, be reordered or moved within the message.
+  </p>
+  <div class="icu-m" lang="zh-TW">
+    歡迎
+    <span class="icu-m-arg">{<span class="icu-m-argname">lastName</span>}</span>
+    <span class="icu-m-arg">{<span class="icu-m-argname">firstName</span>}</span>
+    回來
+  </div>
+  <p>
+    Removing or translating the placeholders can mess up the final message. The following are incorrect:
+  </p>
+  <div class="icu-m icu-m--bad" lang="pt-BR">
+    Oi,
+    <span class="icu-m-arg">{<span class="icu-m-argname">primeiroNome</span>}</span>
+    <span class="icu-m-arg">{<span class="icu-m-argname">sobreNome</span>}</span>!
+  </div>
+  <div class="icu-m icu-m--bad" lang="pt-BR">
+    Oi, primeiroNome!
+  </div>
+</section>
+
+<section>
+  <h2>Number, Date, and Time placeholders</h2>
+  <p>
+    Placeholders can include additional formatting information which should also be preserved during translation.
+  </p>
+  <div class="icu-m" lang="en-US">
+    Last modified
+    <span class="icu-m-arg">{<span class="icu-m-argname">updated</span>,
+      <span class="icu-m-argtype">date</span>,
+      <span class="icu-m-argstyle">short</span>}</span>
+    <span class="icu-m-arg">{<span class="icu-m-argname">updated</span>,
+      <span class="icu-m-argtype">time</span>}</span>.
+  </div>
+  <div class="icu-m" lang="es">
+    Fue modificado el
+    <span class="icu-m-arg">{<span class="icu-m-argname">updated</span>,
+      <span class="icu-m-argtype">date</span>,
+      <span class="icu-m-argstyle">short</span>}</span>
+    <span class="icu-m-arg">{<span class="icu-m-argname">updated</span>,
+      <span class="icu-m-argtype">time</span>}</span>.
+  </div>
+  <p>
+    The spacing inside the braces is not significant, so the following are all the same:
+  </p>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">updated</span>,<br/>
+      <span class="icu-m-argtype">date</span>,<br/>
+      <span class="icu-m-argstyle">short</span>
+    }</span>
+  </div>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{<span
+      class="icu-m-argname">updated</span>,<span
+      class="icu-m-argtype">date</span>,<span
+      class="icu-m-argstyle">short</span>}</span>
+  </div>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">updated</span> ,
+      <span class="icu-m-argtype">date</span> ,
+      <span class="icu-m-argstyle">short</span>
+    }</span>
+  </div>
+</section>
+
+<section>
+  <h2>Select, Plural, and Select Ordinal placeholders</h2>
+  <p>
+    While the simple placeholders shown so far are not translated,
+    there are more advanced placeholders that include message parts that should be translated.
+    These message parts are wrapped by additional curly braces {}.
+  </p>
+  <p>
+    <strong>select</strong> placeholders pick a message part to show based on text matching.
+    This is often used for gender <code>male</code> or <code>female</code>, but it can be any text key.
+  </p>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">gender</span>,
+      <span class="icu-m-argtype">select</span>,<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">male</span>
+      {<span class="icu-m-sub">He won</span>}<br/>
+      <span class="icu-m-argkey">female</span>
+      {<span class="icu-m-sub">She won</span>}<br/>
+      &nbsp;<span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub">They won</span>}
+    }</span>
+    the game.
+  </div>
+  <div class="icu-m" lang="pt-BR">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">gender</span>,
+      <span class="icu-m-argtype">select</span>,<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">male</span>
+      {<span class="icu-m-sub">Ele ganhou</span>}<br/>
+      <span class="icu-m-argkey">female</span>
+      {<span class="icu-m-sub">Ela ganhou</span>}<br/>
+      &nbsp;<span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub">Ele ganhou</span>}
+    }</span>
+    o jogo.
+  </div>
+  <p>
+    The message parts inside these placeholders need to be translated, and you may need to add or remove message parts depending on the rules of your target language.
+    Every one of these placeholders must have an <code>other</code> message.
+    If the <code>other</code> message is redundant, you can remove the more specific duplicate message.
+  </p>
+  <div class="icu-m" lang="pt-BR">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">gender</span>,
+      <span class="icu-m-argtype">select</span>,
+      <span class="icu-m-argkey">female</span>
+      {<span class="icu-m-sub">Ela ganhou</span>}
+      <span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub">Ele ganhou</span>}
+    }</span>
+    o jogo.
+  </div>
+  <p>
+    <strong>plural</strong> placeholders pick a message part to show based on number pluralization rules.
+    In English everything is plural <code>other</code> except when there is only <code>one</code>. 
+    For example: 0 messages, 1 message, 20 messages. 
+    Each language has <a class="ext" href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">its own rules for pluralization</a>, 
+    and in ICU the possible keys are <code>zero</code>, <code>one</code>, <code>two</code>, 
+    <code>few</code>, <code>many</code>, and <code>other</code>. If you want a message for a specific 
+    number that does not correspond to a key, or for which the key doesn't have a rule in you language you 
+    can use <code>=n</code>. 
+  </p>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">numBananas</span>,
+      <span class="icu-m-argtype">plural</span>,<br/>
+      &nbsp;&nbsp;&nbsp;<span class="icu-m-argkey">=0</span>
+      {<span class="icu-m-sub">no bananas</span>}<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">one</span>
+      {<span class="icu-m-sub">a banana</span>}<br/>
+      <span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub"><span class="icu-m-arg">#</span> bananas</span>}
+    }</span>
+  </div>
+  <p>
+    As the example showed, message parts for specific numbers can use a special <code>#</code> placeholder that will be replaced with the actual number, formatted as a <code>number</code> placeholder.
+  </p>
+  <p>
+  	When the language code is provided, the plural rules for that language are loaded and used to resolve 
+  	the plural class based on the number entered. For example for Arabic if the remainder of number of bananas 
+  	divided by 100 is between 3 to 10, the plural case defined under <code>few</code> is used and that remainder 
+  	is between 11 to 99, the plural case defined under <code>many</code> is used.
+  	
+  <p>
+    <strong>selectordinal</strong> placeholders are much like plural, only they are used for ordering instead of counting.
+    The keys are the same as for plural, but the rules for each language may be different.
+    For example, English has different forms for 1st, 2nd, 3rd, and 4th, and these correspond to keys
+    <code>one</code>, <code>two</code>, <code>few</code>, and <code>other</code>. If the language code is provided,
+    the ordinal rules for that language is loaded and used.
+  </p>
+  <div class="icu-m" lang="en-US">
+    <span class="icu-m-arg">{
+      <span class="icu-m-argname">rank</span>,
+      <span class="icu-m-argtype">selectordinal</span>,<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">one</span>
+      {<span class="icu-m-sub"><span class="icu-m-arg">#</span>st place</span>}<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">two</span>
+      {<span class="icu-m-sub"><span class="icu-m-arg">#</span>nd place</span>}<br/>
+      &nbsp;&nbsp;<span class="icu-m-argkey">few</span>
+      {<span class="icu-m-sub"><span class="icu-m-arg">#</span>rd place</span>}<br/>
+      <span class="icu-m-argkey">other</span>
+      {<span class="icu-m-sub"><span class="icu-m-arg">#</span>th place</span>}
+    }</span>
+  </div>
+</main>
+<aside class="aside">
+  <h2>Try it out</h2>
+  <p>
+    Type out or paste a message below to see how it will be parsed.
+  </p>
+  <div id="tryit">
+  </div>
+</aside>
+
+
+<script src="index.js"></script>
+</body>
+</html>
