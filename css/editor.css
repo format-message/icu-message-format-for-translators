@@ -1,0 +1,98 @@
+@import "./common.css";
+
+.editor-title {
+  margin-top: 30px;
+}
+
+.Form-pattern {
+  position: relative;
+}
+.Form-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: none;
+  font-family: monospace;
+  font-size: 13.5px;
+  padding: 0.8em;
+  resize: none;
+  color: black;
+  overflow: hidden;
+}
+.Form-message {
+  pointer-events: none;
+  position: relative;
+  min-height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 0 1.5rem 0;
+  background: none;
+  white-space: pre;
+  padding-bottom: 2rem;
+}
+.Form-params {
+  margin: 20px 0 0 0;
+  padding: 0;
+  border: none;
+}
+.Form-params-legend {
+  padding: 0;
+}
+.Form-final {
+  display: block;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.Form-final-error {
+  background: red;
+  color: white;
+}
+
+.p-value {
+  display: inline-block;
+  width: 30%;
+  min-width: 288px;
+  margin-right: 3%;
+}
+
+.help-button {
+  padding: 0;
+  line-height: 16px;
+  height: 16px;
+  width: 16px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.p-tooltip {
+  position: relative;
+}
+.p-tooltip-always::after,
+.p-tooltip:hover::after {
+  content: attr(data-tooltip);
+  padding: 4px 8px;
+  position: absolute;
+  left: 100%;
+  white-space: pre;
+  background-color: #222;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1em;
+  margin: -4px 0 0 8px;
+}
+
+.icu-m-unknown {
+  color: red;
+}
+.icu-m-unknown::after {
+  background-color: red;
+  left: 0;
+  top: 24px;
+  margin: 0;
+}

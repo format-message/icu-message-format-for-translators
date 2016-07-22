@@ -20,5 +20,5 @@ Session.vim
 node_modules
 
 # generated
-index.js
-index.js.map
+editor.js
+editor.js.map

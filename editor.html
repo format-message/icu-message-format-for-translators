@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Online ICU Message Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600"/>
+  <link rel="stylesheet" href="./css/normalize.css"/>
+  <link rel="stylesheet" href="./css/skeleton.css"/>
+  <link rel="stylesheet" href="./css/editor.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1 class="editor-title">Online ICU Message Editor</h1>
+    <p>
+      Paste or type in the original message, then translate the text in black.
+      Special symbols appear in gray, and placeholder names, types, styles, and
+      selectors appear in blue. Only translate the black text.
+      <a href="./index.html">Learn more about ICU messages</a>
+    </p>
+    <div id="editor"></div>
+  </main>
+
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
+  <script src="editor.js"></script>
+</body>

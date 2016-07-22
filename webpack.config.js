@@ -4,7 +4,7 @@ module.exports = {
   cache: true,
   context: __dirname,
   entry: {
-    index: [
+    editor: [
       './lib/main.js'
     ]
   },

@@ -20,7 +20,7 @@
   },
   "homepage": "http://format-message.github.io/icu-message-format-for-translators/",
   "devDependencies": {
-    "format-message-parse": "^4.0.0",
+    "format-message-parse": "^4.1.0",
     "message-format": "^2.0.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
