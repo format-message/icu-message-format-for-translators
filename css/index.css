@@ -1,0 +1,32 @@
+@import "./common.css";
+
+.section {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.section-row {
+  display: flex;
+  align-items: center;
+}
+
+.section-column {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.editor-link {
+  display: inline-block;
+  position: relative;
+}
+
+.editor-link:hover::after {
+  position: absolute;
+  right: 1px;
+  top: -4px;
+  margin: 0;
+}
