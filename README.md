@@ -1,5 +1,7 @@
 # ![format-message][logo]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/format-message/icu-message-format-for-translators.svg)](https://greenkeeper.io/)
+
 > Instructions for translators of format-message and other ICU Message Format based projects.
 
 The [ICU Message Format][icu-message] is a great format for user-visible strings, and includes simple placeholders, number and date placeholders, and selecting among submessages for gender and plural arguments. The format is used in apis in [C++][icu-cpp], [PHP][icu-php], [Java][icu-java], and [JavaScript][format-message] [2][messageformat] [3][intl-messageformat].
