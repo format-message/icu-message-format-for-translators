@@ -54,11 +54,37 @@
   color: white;
 }
 
+.Form-note {
+  margin: 10px 0 0 0;
+  font-style: italic;
+}
+.Form-note::before {
+  content: "*";
+  color: orange;
+}
+
 .p-value {
   display: inline-block;
   width: 30%;
   min-width: 288px;
   margin-right: 3%;
+}
+
+.p-checkbox {
+  display: 'inline-block';
+  margin-right: 0.5em;
+  vertical-align: 1px;
+}
+
+.p-type {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.p-type-unknown {
+  color: orange;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .help-button {
