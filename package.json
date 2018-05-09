@@ -12,7 +12,7 @@
   },
   "author": {
     "name": "Andy VanWagoner",
-    "email": "thetalecrafter@gmail.com"
+    "email": "andy@vanwago.net"
   },
   "license": "MIT",
   "bugs": {
@@ -20,8 +20,8 @@
   },
   "homepage": "http://format-message.github.io/icu-message-format-for-translators/",
   "devDependencies": {
-    "format-message-interpret": "^6.0.0-alpha.0",
-    "format-message-parse": "^6.0.0-alpha.0",
+    "format-message-interpret": "^6.0.3",
+    "format-message-parse": "^6.0.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "redux": "^3.5.2",

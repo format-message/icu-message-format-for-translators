@@ -1797,20 +1797,20 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-format-message-formats@^6.0.0-alpha.0:
-  version "6.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/format-message-formats/-/format-message-formats-6.0.0-alpha.0.tgz#b4bb6f745e8b5584ce703a0992bb4b6b9643902c"
+format-message-formats@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/format-message-formats/-/format-message-formats-6.0.3.tgz#d17772611e2fa1015ff6bbb93c6c1f1351101f98"
 
-format-message-interpret@^6.0.0-alpha.0:
-  version "6.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/format-message-interpret/-/format-message-interpret-6.0.0-alpha.0.tgz#0ddae6bf8065e297edd792476705711bd0ef57b6"
+format-message-interpret@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/format-message-interpret/-/format-message-interpret-6.0.3.tgz#814787a4f25b4f8a1fbdd5427c15d59b96e20092"
   dependencies:
-    format-message-formats "^6.0.0-alpha.0"
-    lookup-closest-locale "^6.0.0-alpha.0"
+    format-message-formats "^6.0.3"
+    lookup-closest-locale "^6.0.3"
 
-format-message-parse@^6.0.0-alpha.0:
-  version "6.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/format-message-parse/-/format-message-parse-6.0.0-alpha.0.tgz#36ca5f3301e7a70e9ba4b4b068e721bfa1b08130"
+format-message-parse@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/format-message-parse/-/format-message-parse-6.0.3.tgz#809ce7eeabc909d46e7a4414e5d8dae1120b4c83"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -2763,9 +2763,9 @@ log-update@^1.0.2:
     ansi-escapes "^1.0.0"
     cli-cursor "^1.0.2"
 
-lookup-closest-locale@^6.0.0-alpha.0:
-  version "6.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/lookup-closest-locale/-/lookup-closest-locale-6.0.0-alpha.0.tgz#3d655b2323ed9e1a8ae55ea9d28b389534ce1926"
+lookup-closest-locale@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/lookup-closest-locale/-/lookup-closest-locale-6.0.3.tgz#13dfe3c59c7fa5c765b338311e3dec2984aa156c"
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
   version "1.3.1"
