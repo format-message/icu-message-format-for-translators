@@ -28,7 +28,7 @@
   display: block;
   margin: 0 0 1.5rem 0;
   background: none;
-  white-space: pre;
+  white-space: pre-wrap;
   padding-bottom: 2rem;
   font-size: 13.5px;
 }
